@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		290246AE9DAB526737527105C03D5D8D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8797B9C54DEE6F083E680080AD1CF /* ReplaceMe.swift */; };
 		2CB132A09F201593D9016B37A4D5DE9C /* YSStackView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CDD05CAEC1FC1D1EDBCE778BF617D0 /* YSStackView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3860DC6A750E0431C5A9ED5AD4B31A4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		598946C66DBD15DC75A6DFD94293BDFB /* Pods-YSStackView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C6AE9D8A5C07A74CE0B9A47B4405D2 /* Pods-YSStackView_Tests-dummy.m */; };
+		745F78EB2749746B00A93E35 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78E82749746B00A93E35 /* Stack.swift */; };
+		745F78EC2749746B00A93E35 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78E92749746B00A93E35 /* UIStackView+.swift */; };
+		745F78ED2749746B00A93E35 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78EA2749746B00A93E35 /* UIView+.swift */; };
+		745F78EE274976B100A93E35 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78EA2749746B00A93E35 /* UIView+.swift */; };
+		745F78EF274976BA00A93E35 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78E92749746B00A93E35 /* UIStackView+.swift */; };
+		745F78F0274976BE00A93E35 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F78E82749746B00A93E35 /* Stack.swift */; };
 		84C2A05616448447BA5D86775C6AC58C /* YSStackView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC0137E2CB637D5705488708FC8C6FD /* YSStackView-dummy.m */; };
 		B2AE3BA0F55C2B327E607C36C6407D34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B6764F2FADD5B51DE9757332435D0F50 /* Pods-YSStackView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B81006A804FDAA9973068BB1F0C2FC6A /* Pods-YSStackView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,30 +42,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00860CDC603C931E86B8A02B772619A0 /* YSStackView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YSStackView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		00860CDC603C931E86B8A02B772619A0 /* YSStackView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YSStackView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		016A2E74A5F8AC614B7559F85D5B8A49 /* Pods-YSStackView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YSStackView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1162FE14A34CA1950EAE2A05C5C0B8C6 /* Pods-YSStackView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSStackView_Example-Info.plist"; sourceTree = "<group>"; };
 		12C6AE9D8A5C07A74CE0B9A47B4405D2 /* Pods-YSStackView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YSStackView_Tests-dummy.m"; sourceTree = "<group>"; };
 		1A3AEE7A4E697F47AA699DB58423466C /* Pods-YSStackView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YSStackView_Example-umbrella.h"; sourceTree = "<group>"; };
 		1C4541F4CFF197D00C358CA928591F20 /* Pods-YSStackView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSStackView_Tests-Info.plist"; sourceTree = "<group>"; };
 		28CDD05CAEC1FC1D1EDBCE778BF617D0 /* YSStackView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YSStackView-umbrella.h"; sourceTree = "<group>"; };
-		376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YSStackView; path = YSStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YSStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AEBE492FAEAE1E3ABADAA5F7271AF5 /* Pods-YSStackView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YSStackView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		43E8E15DFC14913031F7E7FDB4A3C07B /* YSStackView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YSStackView-Info.plist"; sourceTree = "<group>"; };
 		662EF4E392BC8A8788913CDFC44A3ABF /* Pods-YSStackView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YSStackView_Example-dummy.m"; sourceTree = "<group>"; };
-		67C8797B9C54DEE6F083E680080AD1CF /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = YSStackView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		6DA0BD4C13FD596E5F8E02ACD72E56E7 /* YSStackView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YSStackView.modulemap; sourceTree = "<group>"; };
-		70D11D469234445E841FD1CCDB34FF32 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		70D11D469234445E841FD1CCDB34FF32 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		741341239F924990B0533242ED072FDB /* Pods-YSStackView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSStackView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		745F78E82749746B00A93E35 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		745F78E92749746B00A93E35 /* UIStackView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		745F78EA2749746B00A93E35 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		77757AC5B1231AA8AC2AEA672DE60519 /* Pods-YSStackView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSStackView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7FF4BFAE57C779C1CC537FF5971F583E /* Pods-YSStackView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YSStackView_Tests.modulemap"; sourceTree = "<group>"; };
 		836FACE17040B1A8DBD603D1213CE479 /* Pods-YSStackView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSStackView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		93D465D920DE5F0F051C098F9E2E944C /* Pods-YSStackView_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YSStackView_Example"; path = Pods_YSStackView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4B122F20893598EC2213C83889065A2 /* Pods-YSStackView_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YSStackView_Tests"; path = Pods_YSStackView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D465D920DE5F0F051C098F9E2E944C /* Pods_YSStackView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSStackView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4B122F20893598EC2213C83889065A2 /* Pods_YSStackView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSStackView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7424105A3C4A213C4367BCACB6A3BE0 /* YSStackView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YSStackView.debug.xcconfig; sourceTree = "<group>"; };
-		ADF912FB5E809618C3258B87E22EA37C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		ADF912FB5E809618C3258B87E22EA37C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B81006A804FDAA9973068BB1F0C2FC6A /* Pods-YSStackView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YSStackView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CAC0137E2CB637D5705488708FC8C6FD /* YSStackView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YSStackView-dummy.m"; sourceTree = "<group>"; };
 		CD362E633A113A6EC0F9911113746A24 /* Pods-YSStackView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YSStackView_Example.modulemap"; sourceTree = "<group>"; };
@@ -127,6 +134,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		745F78E72749742700A93E35 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				745F78E82749746B00A93E35 /* Stack.swift */,
+				745F78E92749746B00A93E35 /* UIStackView+.swift */,
+				745F78EA2749746B00A93E35 /* UIView+.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		8FE21EC65E4EF6BBA63499C67464315D /* Pods-YSStackView_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +164,7 @@
 		9D1ED426656D0604A09E445501333DA2 /* YSStackView */ = {
 			isa = PBXGroup;
 			children = (
-				67C8797B9C54DEE6F083E680080AD1CF /* ReplaceMe.swift */,
+				745F78E72749742700A93E35 /* Source */,
 				0EE0ABD88AD98691BE78D98D067EB0B7 /* Pod */,
 				D6BD270CD3B64934D145C76B1CEAAFCC /* Support Files */,
 			);
@@ -216,9 +233,9 @@
 		FF382FFE78DF5A798CB408448A331B91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93D465D920DE5F0F051C098F9E2E944C /* Pods-YSStackView_Example */,
-				A4B122F20893598EC2213C83889065A2 /* Pods-YSStackView_Tests */,
-				376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView */,
+				93D465D920DE5F0F051C098F9E2E944C /* Pods_YSStackView_Example.framework */,
+				A4B122F20893598EC2213C83889065A2 /* Pods_YSStackView_Tests.framework */,
+				376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +286,7 @@
 			);
 			name = "Pods-YSStackView_Example";
 			productName = Pods_YSStackView_Example;
-			productReference = 93D465D920DE5F0F051C098F9E2E944C /* Pods-YSStackView_Example */;
+			productReference = 93D465D920DE5F0F051C098F9E2E944C /* Pods_YSStackView_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		52B479A74192318EAC4510764D86102B /* YSStackView */ = {
@@ -287,7 +304,7 @@
 			);
 			name = YSStackView;
 			productName = YSStackView;
-			productReference = 376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView */;
+			productReference = 376813EA4E34974F55A0C8FF09F5A6BB /* YSStackView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AE69C2ABA6B477172D6624743F0B8F40 /* Pods-YSStackView_Tests */ = {
@@ -306,7 +323,7 @@
 			);
 			name = "Pods-YSStackView_Tests";
 			productName = Pods_YSStackView_Tests;
-			productReference = A4B122F20893598EC2213C83889065A2 /* Pods-YSStackView_Tests */;
+			productReference = A4B122F20893598EC2213C83889065A2 /* Pods_YSStackView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -316,7 +333,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3222BDB24DBE5F2A36521F8C71572685 = {
+						DevelopmentTeam = WTJQPTZHP9;
+						LastSwiftMigration = 1250;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -367,6 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745F78ED2749746B00A93E35 /* UIView+.swift in Sources */,
+				745F78EB2749746B00A93E35 /* Stack.swift in Sources */,
+				745F78EC2749746B00A93E35 /* UIStackView+.swift in Sources */,
 				BF98B130CF6D96190F2536CFCB749946 /* Pods-YSStackView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				290246AE9DAB526737527105C03D5D8D /* ReplaceMe.swift in Sources */,
+				745F78F0274976BE00A93E35 /* Stack.swift in Sources */,
+				745F78EE274976B100A93E35 /* UIView+.swift in Sources */,
+				745F78EF274976BA00A93E35 /* UIStackView+.swift in Sources */,
 				84C2A05616448447BA5D86775C6AC58C /* YSStackView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -477,17 +505,20 @@
 			baseConfigurationReference = 77757AC5B1231AA8AC2AEA672DE60519 /* Pods-YSStackView_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WTJQPTZHP9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-YSStackView_Example/Pods-YSStackView_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-YSStackView_Example/Pods-YSStackView_Example.modulemap";
@@ -498,6 +529,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -520,7 +552,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-YSStackView_Tests/Pods-YSStackView_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-YSStackView_Tests/Pods-YSStackView_Tests.modulemap";
@@ -542,17 +574,20 @@
 			baseConfigurationReference = 741341239F924990B0533242ED072FDB /* Pods-YSStackView_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WTJQPTZHP9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-YSStackView_Example/Pods-YSStackView_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-YSStackView_Example/Pods-YSStackView_Example.modulemap";
@@ -563,6 +598,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -584,7 +621,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/YSStackView/YSStackView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/YSStackView/YSStackView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/YSStackView/YSStackView.modulemap";
 				PRODUCT_MODULE_NAME = YSStackView;
@@ -650,13 +687,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -677,7 +713,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-YSStackView_Tests/Pods-YSStackView_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-YSStackView_Tests/Pods-YSStackView_Tests.modulemap";
@@ -710,7 +746,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/YSStackView/YSStackView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/YSStackView/YSStackView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/YSStackView/YSStackView.modulemap";
 				PRODUCT_MODULE_NAME = YSStackView;
