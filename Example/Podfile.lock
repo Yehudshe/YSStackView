@@ -1,0 +1,16 @@
+PODS:
+  - YSStackView (0.1.0)
+
+DEPENDENCIES:
+  - YSStackView (from `../`)
+
+EXTERNAL SOURCES:
+  YSStackView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YSStackView: 36aedfcadabd1de53edeeb24853ada3b032d391f
+
+PODFILE CHECKSUM: fd95fad8536a5d734641788d047392e4ead798ed
+
+COCOAPODS: 1.11.2

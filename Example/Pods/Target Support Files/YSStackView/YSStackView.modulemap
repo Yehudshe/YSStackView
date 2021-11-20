@@ -1,0 +1,6 @@
+framework module YSStackView {
+  umbrella header "YSStackView-umbrella.h"
+
+  export *
+  module * { export * }
+}
